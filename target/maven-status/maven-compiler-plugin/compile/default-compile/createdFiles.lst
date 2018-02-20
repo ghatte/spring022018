@@ -1,0 +1,7 @@
+poe\spring\GreetingController.class
+poe\spring\Greeting.class
+poe\spring\UserRepository.class
+poe\spring\UserRestController.class
+poe\spring\User.class
+poe\spring\Application.class
+poe\spring\UserManagerService.class

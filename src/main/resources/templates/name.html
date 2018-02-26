@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="ISO-8859-1"></meta>
+<title>Insert title here</title>
+</head>
+<body>
+<h1>
+		<span th:text="${message2}"></span>
+	</h1>
+	<form action="#" th:action="@{/name}" method="post">
+	<table>
+	<tr>
+             
+		<td valign="top"><b class="gensmall">Nom :</b></td>
+		<td><input class="post" name="name" size="25" tabindex="1" type="text"/></td>
+			<td class="cat" colspan="2" align="center">
+			<input th:href="@{/hello}" name="enregistrer" class="btnmain" value="Enregistrer" tabindex="5" type="submit" />
+			</td>
+	</tr>
+	</table>
+	</form>
+</body>
+</html>

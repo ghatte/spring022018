@@ -3,7 +3,6 @@ package poe.spring;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,11 +18,10 @@ public class UserRestController {
 
 	@PostMapping
 	public User save(@RequestBody User user) {
-		
 		User savedUser = userManagerService.signup(user.getLogin(), user.getPassword());
-		System.out.println("C'est moi " + savedUser);
 		return savedUser;
 	}
+
 	
 	@GetMapping(path = "/user")
 	public List<User> getUser() {

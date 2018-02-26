@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="ISO-8859-1"></meta>
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Formulaire d'inscription</h1>
+	<form th:action="@{/formulaire}" method="post" th:object="${loginForm}">
+
+
+	<table>
+	<tr>
+             
+		<td valign="top"><b class="gensmall">Login :</b>
+		<input class="post" name="login" size="25" tabindex="1" type="text" th:field="*{login}"/></td>
+		<td th:if="${#fields.hasErrors('login')}" th:errors="*{login}"></td>
+
+		<td valign="top"><b class="gensmall">Password :</b>
+		<input class="post" name="password" size="25" tabindex="1" type="password" th:field="*{password}"/></td>
+		<td th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></td>
+			
+			
+		<td class="cat" colspan="2" align="center">
+		<input th:href="@{/hello}" name="enregistrer" class="btnmain" value="Enregistrer" tabindex="5" type="submit" />
+		</td>
+	</tr>
+	</table> 
+	</form>
+</body>
+</html>

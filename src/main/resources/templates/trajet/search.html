@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<body>
+	<h1>Recherche de trajet</h1>
+	<form action="#" th:action="@{/trajet/search}" method="post"
+		>
+
+
+		<td valign="top"><b class="gensmall">Ville de depart :</b> <input
+			class="post" th:name="ville" size="25" tabindex="1" type="text"
+			/></td>
+
+		<td class="cat" colspan="2" align="center"><input
+			th:href="@{/trajet/search}" name="rechercher" class="btnmain"
+			value="Rechercher" tabindex="5" type="submit" /></td>
+
+
+		<div th:each="trajet : ${trajets}">
+			<div th:text="${trajet.Depart}"></div>
+			<div th:text="${trajet.Arrive}"></div>
+			<div th:text="${trajet.date}"></div>
+			<div th:text="${trajet.Place}"></div>
+			<div th:text="${trajet.prix}"></div>
+			<hr />
+		</div>
+	</form>
+</body>
+</html>

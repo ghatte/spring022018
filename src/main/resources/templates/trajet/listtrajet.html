@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<body>
+<h1>Ensemble des trajets créés
+</h1>
+
+<div th:each="trajet : ${trajets}">
+    <div th:text="${trajet.Depart}"></div>
+    <div th:text="${trajet.Arrive}"></div>
+    <div th:text="${trajet.date}"></div>
+    <div th:text="${trajet.Place}"></div>
+    <div th:text="${trajet.prix}"></div>
+    <hr/>
+</div>
+
+</body>
+</html>

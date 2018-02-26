@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="ISO-8859-1"></meta>
+<title>Insert title here</title>
+</head>
+<body>
+<h1>
+		Proposer un trajet
+	</h1>
+	<form action="#" th:action="@{/trajet}" method="post" th:object="${trajetForm}">
+	<table>
+	<tr>
+             
+		<td valign="top"><b class="gensmall">Ville de départ :</b></td>
+		<td><input class="post" name="depart" size="25" tabindex="1" type="text" th:field="*{depart}"/></td>
+		
+		<td valign="top"><b class="gensmall">Ville d'arrivée :</b></td>
+		<td><input class="post" name="arrive" size="25" tabindex="1" type="text" th:field="*{arrive}"/></td>
+		
+		<td valign="top"><b class="gensmall">Date :</b></td>
+		<td><input class="post" name="date" size="25" tabindex="1" type="date" th:field="*{date}"/></td>
+		
+		<td valign="top"><b class="gensmall">Prix :</b></td>
+		<td><input class="post" name="prix" size="25" tabindex="1" type="text" th:field="*{prix}"/></td>
+		
+		<td valign="top"><b class="gensmall">Nombre de place :</b></td>
+		<td><input class="post" name="place" size="25" tabindex="1" type="text" th:field="*{place}"/></td>
+		
+		<td valign="top"><b class="gensmall">User :</b></td>
+		<td><input class="post" name="user" size="25" tabindex="1" type="text" th:field="*{user}"/></td>
+		
+		
+		
+			<td class="cat" colspan="2" align="center">
+			<input name="enregistrer" class="btnmain" value="Enregistrer" tabindex="5" type="submit" />
+			</td>
+	</tr>
+	</table>
+	</form>
+</body>
+</html>

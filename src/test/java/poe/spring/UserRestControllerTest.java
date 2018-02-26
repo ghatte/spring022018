@@ -25,9 +25,9 @@ public class UserRestControllerTest {
 	@Autowired
 	UserRepository userRepository;
 
-	@Test
+	@Test //test d'integrations
 	public void checkUserCreation() {
-		String login = "moi";
+		String login = "moitie";
 
 		User createdUser = userManagerService.signup(login, "toi");
 
@@ -40,7 +40,7 @@ public class UserRestControllerTest {
 
 	@Test
 	public void checkUserdeletion() {
-		User createdUser = userManagerService.signup("moi", "toi");
+		User createdUser = userManagerService.signup("moittr", "toi");
 		long createdUserId = createdUser.getId();
 		User user2 = userRepository.findOne(createdUserId);
 		assertThat(user2).isNotNull();
